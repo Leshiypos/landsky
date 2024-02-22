@@ -1,0 +1,56 @@
+header {
+    padding: 0 10px;
+    padding-bottom: 97px;
+    background: url(../../images/background-main.png) no-repeat center top;
+    background-size: cover;
+    color: rgba(255,255,255,1);
+        .wrap_header{
+            max-width: 1594px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+    .logo a{
+        display: flex;
+        align-items: center;
+        font-size: 35px;
+        text-decoration: none;
+        color: rgba(255,255,255,1); 
+        img{
+            margin-right: 9px;
+        }
+    }
+    h1{
+        display: block;
+        width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 163px;
+        margin-bottom: 112px;
+    }
+}
+.top_header{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.main_menu{
+    flex-flow: row wrap;
+    list-style: none;
+    display: flex;
+    font-size: 14px;
+    text-transform: uppercase;
+    li{
+        padding-left: 25px;
+        &.current a{
+            color: rgba(255,255,255,1); 
+        }
+        a{
+            text-decoration: none;
+            color: rgba(255,255,255,.6);
+            &:hover{
+                color: rgba(255,255,255,1);
+            }
+        }
+    }
+}
+

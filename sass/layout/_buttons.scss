@@ -1,0 +1,28 @@
+.button_header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 456px;
+}
+    .button{
+        font-size: 28px;
+        a{
+            display: block;
+            text-decoration: none;
+            color: rgba(255,255,255,1);
+            padding: 20px 40px;
+            border-radius: 60px; 
+        }
+        &.order a{
+            background-color: $button_order;
+            &:hover{
+                background-color: $button_order_hov;
+            }
+        }
+        &.who a{
+            background-color: $button_who;
+            &:hover{
+                background-color: $button_who_hov;
+            }
+        }
+    }
