@@ -1,5 +1,54 @@
 section{
-    &.wrap_section{
+    h2{
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        max-width: 785px;
+    }
+    .wrap_section{
         padding: 0 10px;
+        max-width: $width_wrap;
+        margin: 0 auto;
+    }
+}
+// Cервисы
+.services{
+    padding-top: 130px;
+}
+.block_services{
+    display: grid;
+    padding-left: 0;
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    list-style: none;
+    max-width: 1363px;
+    margin: 0 auto;
+    margin-top: 110px;
+    h3{
+        margin: 10px 0;
+    }
+    li{
+        display: flex;
+        min-height: 120px;
+    }
+    .img{
+        background-color: $color_gen;
+        border-radius: 40px 0 0 40px;
+        display: flex;
+        align-items: center;
+        img{
+            padding: 0 30px;
+            width: 61px;
+            height: 61px;
+        }
+    }
+    .content{
+        background-color: rgba(243, 243, 243, 1);
+        padding: 10px 10px 10px 40px;
+    }
+    .cap{
+        padding-left: 10px;
+        background-color: $color_gen;
+        border-radius: 0 40px 40px 0;
     }
 }

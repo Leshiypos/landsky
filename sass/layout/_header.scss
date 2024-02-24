@@ -1,11 +1,11 @@
 header {
     padding: 0 10px;
     padding-bottom: 97px;
-    background: url(../../images/background-main.png) no-repeat center top;
+    background: url(../images/background-main.png) no-repeat center top;
     background-size: cover;
-    color: rgba(255,255,255,1);
+    color: $text_light;
         .wrap_header{
-            max-width: 1594px;
+            max-width: $width_wrap;
             margin: 0 auto;
             padding-top: 10px;
         }
@@ -14,7 +14,7 @@ header {
         align-items: center;
         font-size: 35px;
         text-decoration: none;
-        color: rgba(255,255,255,1); 
+        color: $text_light;
         img{
             margin-right: 9px;
         }
@@ -42,13 +42,13 @@ header {
     li{
         padding-left: 25px;
         &.current a{
-            color: rgba(255,255,255,1); 
+            color: $text_light; 
         }
         a{
             text-decoration: none;
-            color: rgba(255,255,255,.6);
+            color: $text_light_link_noactive;
             &:hover{
-                color: rgba(255,255,255,1);
+                color: $text_light;
             }
         }
     }

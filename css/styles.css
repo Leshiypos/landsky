@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -304,12 +305,61 @@ template {
 [hidden] {
   display: none; }
 
+ul {
+  padding-inline-start: 0; }
+
+/* сброс стилей браузера */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1.2; }
+
+ol {
+  padding-left: 1.4em;
+  list-style: decimal; }
+
+ul {
+  padding-left: 1.4em;
+  list-style: square; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* конец кода сброса стилей браузера */
 * {
   font-family: "Roboto", sans-serif; }
 
 h1 {
   font-size: 68px;
-  font-weight: bold; }
+  font-weight: 600; }
+
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.8); }
+  h2 span {
+    color: #1e5a5d; }
+
+h3 {
+  font-size: 25px;
+  color: rgba(24, 24, 24, 0.8); }
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(24, 24, 24, 0.8); }
 
 .button_header {
   display: flex;
@@ -337,7 +387,7 @@ h1 {
 header {
   padding: 0 10px;
   padding-bottom: 97px;
-  background: url(../../images/background-main.png) no-repeat center top;
+  background: url(../images/background-main.png) no-repeat center top;
   background-size: cover;
   color: white; }
   header .wrap_header {
@@ -381,7 +431,48 @@ header {
       .main_menu li a:hover {
         color: white; }
 
-section.wrap_section {
-  padding: 0 10px; }
+section h2 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 785px; }
+section .wrap_section {
+  padding: 0 10px;
+  max-width: 1594px;
+  margin: 0 auto; }
+
+.services {
+  padding-top: 130px; }
+
+.block_services {
+  display: grid;
+  padding-left: 0;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+  list-style: none;
+  max-width: 1363px;
+  margin: 0 auto;
+  margin-top: 110px; }
+  .block_services h3 {
+    margin: 10px 0; }
+  .block_services li {
+    display: flex;
+    min-height: 120px; }
+  .block_services .img {
+    background-color: #1e5a5d;
+    border-radius: 40px 0 0 40px;
+    display: flex;
+    align-items: center; }
+    .block_services .img img {
+      padding: 0 30px;
+      width: 61px;
+      height: 61px; }
+  .block_services .content {
+    background-color: #f3f3f3;
+    padding: 10px 10px 10px 40px; }
+  .block_services .cap {
+    padding-left: 10px;
+    background-color: #1e5a5d;
+    border-radius: 0 40px 40px 0; }
 
 /*# sourceMappingURL=styles.css.map */
