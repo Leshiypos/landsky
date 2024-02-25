@@ -1,4 +1,6 @@
 section{
+    padding-top: 130px;
+    padding-bottom: 30px;
     h2{
         display: block;
         margin: 0 auto;
@@ -13,7 +15,7 @@ section{
 }
 // Cервисы
 .services{
-    padding-top: 130px;
+
 }
 .block_services{
     display: grid;
@@ -50,5 +52,187 @@ section{
         padding-left: 10px;
         background-color: $color_gen;
         border-radius: 0 40px 40px 0;
+    }
+}
+
+
+section.works{
+    .wrap_section{
+        display: flex;
+        flex-flow: column nowrap;
+        .but_more{
+            margin: 0 auto;
+            margin-top: 69px;
+        }
+    }
+}
+.block_works{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 20px;
+    margin-top: 110px;
+
+    div:first-child, div:last-child{
+            max-width: 788px;
+    }
+    div:first-child{
+        grid-column: 1/3;
+    }
+    div:last-child{
+        grid-column: 3/-1;
+    }
+    div{
+       
+        max-width: 384px;
+    }
+    img{
+        max-width: 100%;
+        border-radius: $main_radios;
+    }
+}
+.block_best{
+    margin-top: 110px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    .single{
+        flex: 1 1 400px;
+        max-width: 400px;
+        margin-bottom: 53px;
+    }
+    h4{
+        margin-bottom: 19px;
+    }
+    .content{
+        margin-left: 70px;
+    }
+    .num{
+        display: table-cell;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        background-color:$button_who_hov;
+        border-radius: 100%;
+        font-size: 31px;
+        line-height: 1.6;
+        font-weight: 600;
+        color: $text_h4;
+        margin-right: 22px;
+        float: left;
+    }
+}
+.block_reviews{
+    display: flex;
+    margin-top: 72px;
+    flex-flow: row wrap;
+    margin-bottom: 80px;
+    .single-rev{
+        flex: 1 1 400px;
+        margin-left: 20px;
+        &:first-child{
+            margin-left: 0;
+        }
+        h4{
+            margin-top: 26px;
+        }
+        span{
+            margin-top: 15px;
+            display: inline-block;
+            width: 95%;
+            text-align: right;
+        }
+        p{
+            margin-top: 24px;
+        }
+        span{
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        &>img{
+            max-width: 100%;
+            border-radius:$main_radios;
+        }
+        .client{
+            display: flex;
+            margin-top: 23px;
+            align-content: center;
+            margin-bottom: 40px;
+            img{
+                margin-right: 15px;
+            }
+        }
+    }
+}
+.partners{
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: rgba(30, 90, 93, 1);
+    .wrap_section{
+        padding-left: 42px;
+    }
+    .top{
+        height: 61px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        top: 0px;
+    }
+    .bottom{
+        height: 61px;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        position: absolute;
+        bottom: 0px;
+    }
+    .slide{
+        display: flex;
+        align-items:center;
+        justify-content: flex-start;
+        
+        img{
+            max-width: 500px;
+        }
+        .content{
+            max-width: 600px;
+            margin-left: 10%;
+            h3{
+                font-size: 48px;
+                color:rgba(255, 255, 255,1);
+            }
+            p{
+                color:rgba(255, 255, 255,.8);
+                margin-top: 18px;
+            }
+        }
+    }
+    .owl-nav{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        left:-32px;
+        top: 45%;
+        width: 564px;
+    }
+}
+.team{
+    .block_team{
+        margin-top: 102px;
+    }
+    .single{
+        max-width: 361px;
+        margin-right: 50px;
+    }
+    h4{
+        margin-top: 32px;
+    }
+    p{
+        margin-top: 8px;
+    }
+    .avatar{
+        max-width: 361px;
+        border-radius: $main_radios;
     }
 }

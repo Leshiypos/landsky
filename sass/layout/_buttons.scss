@@ -7,7 +7,7 @@
     .button{
         font-size: 28px;
         a{
-            display: block;
+            //display: block;
             text-decoration: none;
             color: rgba(255,255,255,1);
             padding: 20px 40px;
@@ -24,5 +24,17 @@
             &:hover{
                 background-color: $button_who_hov;
             }
+        }
+    }
+    .but_more{
+        display: inline-block;
+        font-size: 28px;
+        text-decoration: none;
+        color: rgba(255,255,255,1);
+        padding: 20px 40px;
+        border-radius: 60px;
+        background-color: $button_order; 
+        &:hover{
+            background-color: $button_order_hov;
         }
     }
