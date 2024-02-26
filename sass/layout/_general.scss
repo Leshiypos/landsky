@@ -23,8 +23,14 @@ h4{
     font-weight: 600;
     color: $text_h4;
 }
+h5{
+    font-size: 32px;
+    color: rgba(255, 255, 255,.8);
+    font-weight: normal;
+}
 p{
     font-size: 16px;
     line-height: 1.5;
-    color: rgba(24, 24, 24, 0.8)
+    color: rgba(24, 24, 24, 0.8);
+    margin-bottom: 15px;
 }
