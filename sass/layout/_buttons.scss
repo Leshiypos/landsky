@@ -6,6 +6,7 @@
 }
     .button{
         font-size: 28px;
+        @include adaptiv-font(28, 20);
         a{
             //display: block;
             text-decoration: none;
@@ -29,6 +30,7 @@
     .but_more{
         display: inline-block;
         font-size: 28px;
+        @include adaptiv-font(28, 20);
         text-decoration: none;
         color: rgba(255,255,255,1);
         padding: 20px 40px;

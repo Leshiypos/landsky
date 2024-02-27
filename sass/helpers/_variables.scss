@@ -1,3 +1,4 @@
+$maxWidth: 1594; //Максимальная ширина макета
 $text_light:rgba(255,255,255,1);
 $text_dark:rgba(0, 0, 0, 0.8);
 $text_light_link_noactive: rgba(255,255,255,.6);
@@ -10,5 +11,5 @@ $button_order_hov : rgba(15,50,51,1); //Кнопка Заказать
 $button_who : rgba(255,191,63,.8); //Кнопка Кто мы
 $button_who_hov : rgba(255,191,63,1); //Кнопка Кто мы
 
-$width_wrap : 1594px;
+$width_wrap : #{$maxWidth}px;
 $main_radios: 45px;

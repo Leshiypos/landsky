@@ -119,6 +119,7 @@ section.works{
         background-color:$button_who_hov;
         border-radius: 100%;
         font-size: 31px;
+        @include adaptiv-font(31, 25);
         line-height: 1.6;
         font-weight: 600;
         color: $text_h4;
@@ -203,6 +204,7 @@ section.works{
             margin-left: 10%;
             h3{
                 font-size: 48px;
+                @include adaptiv-font(48, 25);
                 color:rgba(255, 255, 255,1);
             }
             p{
@@ -275,6 +277,7 @@ section.works{
 
 }
 .about_as{
+    margin-bottom: 139px;
     .wrap_section{
         display: flex;
         flex-flow: row wrap;
@@ -288,6 +291,7 @@ section.works{
     h2{
         text-align: left;
         font-size: 39px;
+        @include adaptiv-font(39, 32);
         display: inline-block;
         padding-bottom: 25px;
         
@@ -317,6 +321,7 @@ footer{
     .wrap_footer{
         display: flex;
         justify-content: space-between;
+        flex-flow: row wrap;
         padding: 0 10px;
         max-width: $width_wrap;
         margin: 0 auto;
@@ -359,7 +364,7 @@ footer{
         }
     }
     .mail{
-        margin-top: 43px;
+        margin-top: 60px;
     }
     .phone{
         margin-top: 30px;
@@ -406,4 +411,16 @@ footer{
             cursor: pointer;
         }
     }
+    .copyright, .developer{
+        font-size: 16px;
+        color:rgba(255, 255, 255,.6);
+        text-align: center;
+        margin-top: 70px;
+    }
+    .developer{
+        font-size: 12px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+    }
+
 }

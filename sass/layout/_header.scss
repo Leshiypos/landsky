@@ -13,10 +13,13 @@ header {
         display: flex;
         align-items: center;
         font-size: 35px;
+        @include adaptiv-font(35, 20);
         text-decoration: none;
         color: $text_light;
         img{
             margin-right: 9px;
+            max-width: 69px;
+            @include adaptiv-width(69,30);
         }
     }
     h1{
