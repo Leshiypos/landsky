@@ -1,5 +1,6 @@
 section{
     padding-top: 130px;
+    @include adaptive('padding-top', 130, 40);
     padding-bottom: 30px;
     h2{
         display: block;
@@ -14,9 +15,7 @@ section{
     }
 }
 // Cервисы
-.services{
 
-}
 .block_services{
     display: grid;
     padding-left: 0;
@@ -26,6 +25,10 @@ section{
     max-width: 1363px;
     margin: 0 auto;
     margin-top: 110px;
+    @include mobil_size{
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+    @include adaptive('margin-top', 110 , 30 );
     h3{
         margin: 10px 0;
     }
@@ -38,10 +41,18 @@ section{
         border-radius: 40px 0 0 40px;
         display: flex;
         align-items: center;
+        @include mobil_size{
+            padding-left: 10px;
+            background-color: $color_gen;
+            border-radius: 40px 0 0 40px;
+        }
         img{
             padding: 0 30px;
             width: 61px;
             height: 61px;
+            @include mobil_size{
+                display: none;
+            }
         }
     }
     .content{
@@ -63,6 +74,7 @@ section.works{
         .but_more{
             margin: 0 auto;
             margin-top: 69px;
+            @include adaptive('margin-top', 69 , 30 );
         }
     }
 }
@@ -71,10 +83,18 @@ section.works{
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     gap: 20px;
+    @include adaptive('gap', 20 , 15 );
     margin-top: 110px;
-
+    @include adaptive('margin-top', 110 , 30 );
+    @include mobil_size{
+        display: block;
+        
+    }
     div:first-child, div:last-child{
             max-width: 788px;
+            @include mobil_size{
+                max-width: 100%;
+            }
     }
     div:first-child{
         grid-column: 1/3;
@@ -85,23 +105,33 @@ section.works{
     div{
        
         max-width: 384px;
+        @include mobil_size{
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
     }
     img{
-        max-width: 100%;
+        width: 100%;
         border-radius: $main_radios;
+        @include adaptive('border-radius', 45 , 15 );
     }
 }
 .fancybox__content img{
     border-radius: $main_radios;
+    @include adaptive('border-radius', 45 , 15 );
 }
 .block_best{
     margin-top: 110px;
+    @include adaptive('margin-top', 110 , 50 );
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     .single{
         flex: 1 1 400px;
         max-width: 400px;
+        @include mobil_size{
+            max-width: 100%;
+        }
         margin-bottom: 53px;
     }
     h4{
@@ -119,7 +149,6 @@ section.works{
         background-color:$button_who_hov;
         border-radius: 100%;
         font-size: 31px;
-        @include adaptiv-font(31, 25);
         line-height: 1.6;
         font-weight: 600;
         color: $text_h4;
@@ -130,16 +159,21 @@ section.works{
 .block_reviews{
     display: flex;
     margin-top: 72px;
+    @include adaptive('margin-top', 72 , 50);
     flex-flow: row wrap;
     margin-bottom: 80px;
     .single-rev{
         flex: 1 1 400px;
         margin-left: 20px;
+        @include mobil_size{
+            margin-left: 0;
+        }
         &:first-child{
             margin-left: 0;
         }
         h4{
             margin-top: 26px;
+            @include adaptive('margin-top', 26 , 20);
         }
         span{
             margin-top: 15px;
@@ -157,10 +191,12 @@ section.works{
         &>img{
             max-width: 100%;
             border-radius:$main_radios;
+            @include adaptive('border-radius', 45 , 15 );
         }
         .client{
             display: flex;
             margin-top: 23px;
+            @include adaptive('margin-top', 23 , 10);
             align-content: center;
             margin-bottom: 40px;
             img{
@@ -176,6 +212,11 @@ section.works{
     background-color: rgba(30, 90, 93, 1);
     .wrap_section{
         padding-left: 42px;
+        @media (max-width : 564px){
+            padding-left: 10px;
+            padding-top: 52px;
+            padding-bottom: 115px;
+        }
     }
     .top{
         height: 61px;
@@ -183,6 +224,9 @@ section.works{
         background-color: rgb(255, 255, 255);
         position: absolute;
         top: 0px;
+        @media (max-width : 564px){
+            display: none;
+        }
     }
     .bottom{
         height: 61px;
@@ -190,18 +234,30 @@ section.works{
         background-color: rgb(255, 255, 255);
         position: absolute;
         bottom: 0px;
+        @media (max-width : 564px){
+            display: none;
+        }
     }
     .slide{
         display: flex;
         align-items:center;
         justify-content: flex-start;
+        @media (max-width : 564px){
+            flex-flow: column-reverse nowrap;
+            padding-top: 21px;
+            
+        }
         
         img{
             max-width: 500px;
+            @include adaptive('border-radius', 20 , 15 );
         }
         .content{
             max-width: 600px;
             margin-left: 10%;
+            @media (max-width : 564px){
+                margin-left: 0px;
+            }
             h3{
                 font-size: 48px;
                 @include adaptiv-font(48, 25);
@@ -220,15 +276,22 @@ section.works{
         left:-32px;
         top: 45%;
         width: 564px;
+        @media (max-width : 564px){
+            display: none;
+        }
     }
 }
 .team{
     .block_team{
         margin-top: 102px;
+        @include adaptive('margin-top', 102 , 50);
     }
     .single{
         max-width: 361px;
         margin-right: 50px;
+        @include mobil_size{
+            margin-right: 25px;
+        }
     }
     h4{
         margin-top: 32px;
@@ -239,13 +302,22 @@ section.works{
     .avatar{
         max-width: 361px;
         border-radius: $main_radios;
+        @include adaptive('border-radius', 45 , 15 );
     }
 }
 // Блок как заказать
 .haw_order{
+    .wrap_section>img{
+        @include mobil_size{
+            display: none;
+        }
+    }
     text-align: center;
     h2{
         margin-bottom: 98px;
+        @include mobil_size{
+            margin-bottom: 45px;
+        }
     }
     .block{
         display: flex;
@@ -255,9 +327,18 @@ section.works{
         margin: 50px auto;
         min-height: 250px;
         border-radius: $main_radios;
+        @include adaptive('border-radius', 45 , 15 );
         box-shadow:0 0 66px rgba(0, 0, 0, 0.2) ;
         img{
             max-width: 130px;
+            @include adaptive('max-width', 130 , 40);
+        }
+        @include mobil_size{
+            flex-flow: column nowrap;
+            padding: 0;
+            margin: 0;
+            box-shadow:none;
+            min-height: 0;
         }
     }
     .content{
@@ -265,6 +346,11 @@ section.works{
         padding-left: 10%;
         margin-top: 20px;
         margin-bottom: 20px;
+        @include mobil_size{
+            padding-left: 0;
+            text-align: center;
+            margin-top: 45px;
+        }
         a{
             color: $text_h4;
             font-weight: 600;
@@ -273,11 +359,17 @@ section.works{
         h4{
             margin-bottom: 17px;
         }
+        p{
+            @include mobil_size{
+                text-align: justify;
+            }
+        }
     }
 
 }
 .about_as{
     margin-bottom: 139px;
+    @include adaptive('margin-bottom', 139, 123);
     .wrap_section{
         display: flex;
         flex-flow: row wrap;
@@ -294,133 +386,17 @@ section.works{
         @include adaptiv-font(39, 32);
         display: inline-block;
         padding-bottom: 25px;
+        @include mobil_size{
+            margin-top: 25px;
+        }
         
     }
     img{
         width: 100%;
         border-radius: $main_radios;
+        @include adaptive('border-radius', 45 , 15 );
         margin-right: 40px;
         max-width: 600px;
         flex: 1 1 200px;
     }
-}
-
-
-// ФУТЕР
-footer{
-    background-color: $button_order_hov;
-    padding-top: 81px;
-    color:rgb(255, 255, 255);
-    a{
-        color:rgba(255, 255, 255,.8);
-        text-decoration: none;
-    }
-    ul{
-        list-style: none;
-    }
-    .wrap_footer{
-        display: flex;
-        justify-content: space-between;
-        flex-flow: row wrap;
-        padding: 0 10px;
-        max-width: $width_wrap;
-        margin: 0 auto;
-    }
-    .block_logo{
-        img{
-            max-width: 51px;
-            margin-right: 22px;
-        }
-        a{
-            display: flex;
-            align-items:center;
-            font-size: 32px;
-            text-decoration: none;
-        }
-    }
-    .info{
-        color:rgba(255, 255, 255,.6);
-        font-weight: 500;
-        max-width: 400px;
-        line-height: 1.5;
-        margin-top: 43px;
-    }
-    .social{
-        display: flex;
-        justify-content: space-between;
-        margin-top: 37px;
-        padding-left: 0;
-        max-width: 344px;
-    }
-
-    .footer_menu{
-        margin-top: 43px;
-        padding: 0;
-        font-size: 16px;
-        text-transform: uppercase;
-        line-height: 2.5;
-        a:hover{
-            color:rgba(255, 255, 255,1);
-        }
-    }
-    .mail{
-        margin-top: 60px;
-    }
-    .phone{
-        margin-top: 30px;
-    }
-    .mail, .phone{
-        display: flex;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 500;
-        color:rgba(255, 255, 255,.6);
-        img{
-            margin-right: 23px;
-        }
-    }
-    form{
-        margin-top: 86px;
-        display: flex;
-        align-items: center;
-        .email{
-            height: 50px;
-            width: 250px;
-            border: none;
-            padding: 0;
-            padding-left: 20px;
-            margin: 0;
-            font-size: 20px;
-            background-color: rgba(208, 208, 208, 0.6);
-            border-radius: $main_radios 0 0 $main_radios;
-            &::placeholder{
-                color: rgba(255, 255, 255,.7);
-            }
-        }
-        .submit{
-            border: none;
-            padding: 0;
-            margin: 0;
-            height: 50px;
-            width: 150px;
-            background-color: rgba(255, 191, 63, 1);
-            color:rgb(255, 255, 255);
-            text-transform: uppercase;
-            font-size: 16px;
-            border-radius: 0 $main_radios $main_radios 0;
-            cursor: pointer;
-        }
-    }
-    .copyright, .developer{
-        font-size: 16px;
-        color:rgba(255, 255, 255,.6);
-        text-align: center;
-        margin-top: 70px;
-    }
-    .developer{
-        font-size: 12px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-    }
-
 }

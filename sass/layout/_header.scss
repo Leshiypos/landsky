@@ -25,6 +25,7 @@ header {
     h1{
         display: block;
         width: 50%;
+        @include adaptive('width', 1042 , 383 );
         text-align: center;
         margin: 0 auto;
         margin-top: 163px;

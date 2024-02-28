@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  var winW = $(window).width();
     Fancybox.bind("[data-fancybox]", {
         // Your custom options
       });
@@ -15,11 +16,12 @@ $(document).ready(function(){
     });
 
     $(".block_team").owlCarousel({
-      
       loop:   true,
       autoplay: true,
       nav:  false,
       autoWidth: true,
     });
+
+
 
 })
