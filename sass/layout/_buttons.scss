@@ -41,3 +41,20 @@
             background-color: $button_order_hov;
         }
     }
+
+
+    .but_send{
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        @include adaptiv-font(28, 20);
+        color: rgba(255,255,255,1) !important;
+        padding: 20px 40px !important;
+        margin: 48px auto 0 auto;
+        border-radius: 60px; 
+        background-color: $button_order;
+        border: none;
+        &:hover{
+            background-color: $button_order_hov;
+        }
+    }

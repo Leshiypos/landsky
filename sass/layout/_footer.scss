@@ -135,12 +135,43 @@ footer{
     .left{
         @include mobil_size{
             order: 2;
+            margin-top: 50px;
         }
     }
     .center{
+        svg{
+            display: none;
+        }
         @include mobil_size{
+            a{
+                width: 100%;
+                display: inline-block;
+                font-size: 25px;
+            }
+            svg{
+                display: block;
+                margin-top: 7px;
+                fill:rgba(255, 255, 255, 0.8);
+                transition: all 300ms;
+                &.down{
+                    transform: rotate(90deg);
+                }
+            }
+            h5{
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            width: 70%;
             order: 1;
-
+            margin-left: auto;
+            .nav{
+                margin-right: 25px;
+            }
+            .footer_menu{
+                display: none;
+            }
         }
     }
     .right{

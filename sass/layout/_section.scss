@@ -74,10 +74,12 @@ section.works{
         .but_more{
             margin: 0 auto;
             margin-top: 69px;
-            @include adaptive('margin-top', 69 , 30 );
+            @include adaptive('margin-top', 69 , 0 );
         }
     }
 }
+
+@media (min-width : #{$middleWidth}px ){
 .block_works{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -86,15 +88,9 @@ section.works{
     @include adaptive('gap', 20 , 15 );
     margin-top: 110px;
     @include adaptive('margin-top', 110 , 30 );
-    @include mobil_size{
-        display: block;
-        
-    }
+
     div:first-child, div:last-child{
             max-width: 788px;
-            @include mobil_size{
-                max-width: 100%;
-            }
     }
     div:first-child{
         grid-column: 1/3;
@@ -105,10 +101,6 @@ section.works{
     div{
        
         max-width: 384px;
-        @include mobil_size{
-            max-width: 100%;
-            margin-bottom: 10px;
-        }
     }
     img{
         width: 100%;
@@ -116,6 +108,27 @@ section.works{
         @include adaptive('border-radius', 45 , 15 );
     }
 }
+}
+@media (max-width : #{$middleWidth - 1}px ){
+.block_works{
+    gap: 20px;
+    @include adaptive('gap', 20 , 15 );
+    margin-top: 110px;
+    @include adaptive('margin-top', 110 , 30 );
+
+    div{
+        margin-bottom: 5px;
+    }
+    img{
+        border-radius: $main_radios;
+        @include adaptive('border-radius', 45 , 15 );
+    }
+}
+}
+
+
+
+
 .fancybox__content img{
     border-radius: $main_radios;
     @include adaptive('border-radius', 45 , 15 );
@@ -189,7 +202,7 @@ section.works{
             color: rgba(0, 0, 0, 0.6);
         }
         &>img{
-            max-width: 100%;
+            width: 100%;
             border-radius:$main_radios;
             @include adaptive('border-radius', 45 , 15 );
         }
@@ -266,6 +279,9 @@ section.works{
             p{
                 color:rgba(255, 255, 255,.8);
                 margin-top: 18px;
+                @media (max-width : 564px){
+                    margin-bottom: 21px;
+                }
             }
         }
     }
@@ -349,7 +365,7 @@ section.works{
         @include mobil_size{
             padding-left: 0;
             text-align: center;
-            margin-top: 45px;
+            margin-top: 15px;
         }
         a{
             color: $text_h4;
@@ -398,5 +414,11 @@ section.works{
         margin-right: 40px;
         max-width: 600px;
         flex: 1 1 200px;
+        @media (max-width : 1020px){
+            width: 100%;
+            max-width: 100%;
+            margin-right: 0;
+        }
+
     }
 }

@@ -22,6 +22,75 @@ $(document).ready(function(){
       autoWidth: true,
     });
 
+    if (winW < 767){
+      $(".block_works").owlCarousel({
+        items:  1,
+        loop:   true,
+        autoplay: true,
+        nav:  false,
+        autoWidth: true,
+        margin : 10
+      });
 
+    }
+//Копка мобильного меню
+if (winW < 930){
+$('#but_menu').click(function(){
+  $('.main_menu').slideToggle();
+})
+
+$(window).scroll(function(){
+  $('.main_menu').slideUp();
+})
+
+$('.main_menu a').click(function(){
+  $('.main_menu').slideUp();
+})
+}
+
+//Копка мобильного меню футер навигация
+if (winW < 767){
+  $('#but_nav_footer').click(function(){
+    $('.footer_menu').slideToggle();
+    $('#Outline').toggleClass('down');
+  })
+  $('.footer_menu a').click(function(){
+    $('.footer_menu').slideUp();
+    $('#Outline').removeClass('down');
+  })
+}
+
+//Центровка POPup по высоте
+if (winW <= 956) { $('#feedback').height($(window).height());}
+
+$('.button').click(function(evt){
+  evt.preventDefault();
+  $('#send_mail').fadeIn().addClass('visible');
+})
+
+$('#close_pop').click(function(){
+  $('#send_mail').removeClass('visible').fadeOut();
+})
+
+//Валидация формы
+$('#feedback').validate({
+  debug : true,
+  rules:{
+    name: "required",
+    email:{
+      required : true,
+      email : true
+    },
+    theme : "required",
+  },
+  messages: {
+    name : "Пожалуйста, введите cвое имя",
+    email : {
+      required : "Пожалуйста, введите свой E-mail",
+      email : "Пожалуйсва, введите корректный E-mail"
+    },
+    theme : "Пожалуйста, введите тему сообщения",
+  }
+});
 
 })

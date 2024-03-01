@@ -16,7 +16,7 @@ h2{
     }
 }
 h3{
-    // font-size: 25px;
+    font-size: 25px;
     @include adaptiv-font(25, 20);
     color: rgba(24, 24, 24, 0.8)
 }
