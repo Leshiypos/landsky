@@ -422,3 +422,86 @@ section.works{
 
     }
 }
+//Страница ГАЛЕРЕИ
+.bread-crumbs{
+    max-width: $width_wrap;
+    margin: 0 auto;
+    margin-top: 31px;
+    margin-bottom: 55px;
+    padding-left: 10px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.7);
+    a{
+        color: rgba(0, 0, 0, 1);
+        text-decoration: none;
+    }
+    
+}
+.gallery_section{
+    padding-top: 0;
+    h1{
+        font-size: 39px;
+        color: rgba(15, 50, 51, 0.8);
+    }
+    h2{
+        text-align: left;
+        margin-bottom: 17px;
+        color: rgba(0, 0, 0, 0.7)
+    }
+    p{
+        color:rgba(0, 0, 0, 0.8)
+    }
+    .main_screen{
+        display: flex;
+        margin-top: 70px;
+        @include adaptive('margin-top', 70, 40);
+        flex-flow: row wrap;
+    }
+    .wrap_miniature{
+        width: 100px;
+        margin-left: 20px;
+        flex: 1 1 100px;
+        @media (max-width : 640px){
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    #miniature{
+        @media (min-width : 640px){
+            --f-carousel-slide-height: 23%;
+            --f-carousel-spacing: 10px;
+            height: 486px;
+        }
+        .f-carousel__slide{
+            @media (max-width : 640px){
+                width: calc(100% / 3);
+                margin-right: 3px;
+            }
+        }
+    }
+    .images_block_works{
+        flex: 4 4 400px;
+        max-width: 790px;
+        img{
+            width: 100%;
+        }
+        .f-carousel-slide {
+            width: 100%;
+          }
+    }
+
+      .f-button svg{
+        height: 37px;
+        width: 37px;
+        opacity: .6;
+        stroke: none !important;
+      }
+    .discription{
+        margin-left: 68px;
+        flex: 4 4 400px;
+        @media (max-width : 640px){
+            margin-top: 25px;
+            margin-left: 0;
+        }
+    }
+}

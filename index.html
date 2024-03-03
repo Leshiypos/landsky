@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="inc/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="inc/owlcarousel/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/header_main.css"> <!-- Стили для шапки главной страницы -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="inc/owlcarousel/owl.carousel.min.js"></script>
@@ -16,7 +17,7 @@
     <title>LandSky || Ландшафтный дизайн под ключ в Беларуси</title>
 </head>
 <body class="main_page">
-<header>
+<header id="top">
 <div class="wrap_header">
     <div class="top_header">
         <div class="logo"><a href="#"><img src="images/logo.png" >LandSky</a></div>
@@ -27,20 +28,20 @@
                 <path d="M28.125 21.875H1.875C0.839473 21.875 0 22.7145 0 23.75C0 24.7855 0.839473 25.625 1.875 25.625H28.125C29.1605 25.625 30 24.7855 30 23.75C30 22.7145 29.1605 21.875 28.125 21.875Z" fill="white"/>
             </svg>
             <ul class="main_menu">
-                <li class="current"><a href="#">О нас</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#works">Наши работы</a></li>
-                <li><a href="#reviews">Почему мы?</a></li>
-                <li><a href="#footer">Контакты</a></li>
-                <li><a href="#team">Команда</a></li>
-                <li><a href="#haw_order">Как работать</a></li>
+                <li class="current"><a href="index.html#about_as">О нас</a></li>
+                <li><a href="index.html#services">Услуги</a></li>
+                <li><a href="index.html#works">Наши работы</a></li>
+                <li><a href="index.html#reviews">Почему мы?</a></li>
+                <li><a href="index.html#footer">Контакты</a></li>
+                <li><a href="index.html#team">Команда</a></li>
+                <li><a href="index.html#haw_order">Как работать</a></li>
             </ul>
         </nav>
     </div>
     <h1>Ландшафтный дизайн под ключ в Беларуси</h1>
     <div class="button_header">
-        <div class="button order"><a href="#">Заказать</a></div>
-        <div class="button who"><a href="#">Кто мы</a></div>
+        <div class="button order" id="but_order"><a href="#">Заказать</a></div>
+        <div class="button who"><a href="#about_as">Кто мы</a></div>
     </div>
 </div>
 </header>
@@ -171,7 +172,7 @@
                 </a>
             </div>  
         </div>
-        <a href="#" class="but_more">Больше работ</a>
+        <a href="gallery.html" class="but_more">Больше работ</a>
     </div>
 </section>
 <!-- КОНЕЦ Секция НАШИ работы -->
@@ -468,6 +469,12 @@
         </form>
     </div>
 <!-- Конец POPup форма регитрасции -->
+
+<!-- Кнопка Скрол Вверх -->
+<div id="scroll-top">
+    <a href="#top"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15.4,9.88,10.81,5.29a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L14,11.29a1,1,0,0,1,0,1.42L9.4,17.29a1,1,0,0,0,1.41,1.42l4.59-4.59A3,3,0,0,0,15.4,9.88Z"/></svg></a>
+</div>
+
 
 <!-- ФУТЕР -->
 <footer id="footer">

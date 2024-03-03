@@ -63,7 +63,7 @@ if (winW < 767){
 //Центровка POPup по высоте
 if (winW <= 956) { $('#feedback').height($(window).height());}
 
-$('.button').click(function(evt){
+$('#but_order').click(function(evt){
   evt.preventDefault();
   $('#send_mail').fadeIn().addClass('visible');
 })
@@ -92,5 +92,61 @@ $('#feedback').validate({
     theme : "Пожалуйста, введите тему сообщения",
   }
 });
+
+//Показ кнопки scroll-top
+var pageX = window.pageYOffset; // Определяем позицию окна относительно документа (отступ сверху)
+var heightDoc = $(document).height() - $(window).height();  //высоту документа за вычетам высоты окна
+var butTop = $('#scroll-top');                              //кнопка
+var link = butTop.find('a');                                // ссылка в кнопке
+if(pageX < 500) butTop.addClass('hide');                    //Определяем нужно ли показывать кнопку при первичной загрузке страницы
+
+$(window).scroll(function(){
+  pageX = window.pageYOffset;
+  if (pageX >=500) {butTop.removeClass('hide')}             //В вверзу страницы скрываем кнопку
+  else {butTop.addClass('hide')};
+
+  if (pageX < heightDoc/2){                                 //Если выше половины документа - поварачиваем кнопку на прокрутку вверх
+    butTop.css('transform', 'rotate(180deg)');
+    link.attr('href', '#footer');
+
+  }
+  if (pageX >= heightDoc/2){                                 //Если нижк половины документа - поварачиваем кнопку на прокрутку Вниз
+    butTop.css('transform', 'rotate(0)');
+    link.attr('href', '#top');
+
+  }
+})
+
+//СТРАНИЦА GALLERY
+  //СТРАНИЦА GALLERY
+  Fancybox.bind("[data-fancybox]", {  // Подключаем фенсибокс для главного окна Наши работы
+    // Your custom options
+  });
+
+//Поключаем основную карусель
+    const containerWorks = document.getElementById("myCarouselWorks");
+    const optionsWorks = {
+        infinite: (carousel) => {
+            return carousel.pages.length > 2;
+          },
+        transition : "slide",
+        Navigation: {
+            prevTpl: '<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17.5" cy="17.5" r="17.5" transform="matrix(-1 0 0 1 35 0)" fill="#FFFCFC" fill-opacity="0.7"/><path d="M18.045 26.8262L20.6963 24.1737L14.5225 18L20.6963 11.8262L18.045 9.17374L11.4288 15.79C11.1385 16.0802 10.9083 16.4247 10.7512 16.8039C10.5941 17.1831 10.5132 17.5895 10.5132 18C10.5132 18.4104 10.5941 18.8169 10.7512 19.1961C10.9083 19.5753 11.1385 19.9198 11.4288 20.21L18.045 26.8262Z" fill="#A7A4A4"/></svg>',
+            nextTpl: '<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="17.5" cy="17.5" r="17.5" fill="#FFFCFC" fill-opacity="0.7"/><path d="M16.955 26.8262L14.3037 24.1737L20.4775 18L14.3037 11.8262L16.955 9.17374L23.5712 15.79C23.8615 16.0802 24.0917 16.4247 24.2488 16.8039C24.4059 17.1831 24.4868 17.5895 24.4868 18C24.4868 18.4104 24.4059 18.8169 24.2488 19.1961C24.0917 19.5753 23.8615 19.9198 23.5712 20.21L16.955 26.8262Z" fill="#A7A4A4"/></svg>',
+          }
+     };
+    const sliderWorks = new Carousel(containerWorks, optionsWorks);
+
+//Поключаем основную карусель
+var ax = (winW>640)?'y':'x';
+
+    const containerMiniat = document.getElementById("miniature");
+    const optionsMiniat = {
+        infinite: true,
+        axis: ax,
+        Navigation : true,
+        Dots : false
+     };
+    const sliderMiniat = new Carousel(containerMiniat, optionsMiniat);
 
 })

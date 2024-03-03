@@ -58,3 +58,34 @@
             background-color: $button_order_hov;
         }
     }
+
+    #scroll-top{
+        position: fixed;
+        z-index: 3000;
+        bottom: 50px;
+        right: 50px;
+        display: inline-block;
+        opacity: 1;
+        transition: all 500ms;
+        @include mobil_size{
+            bottom: 10px;
+            right: 10px;
+            opacity: .5;
+        }
+        a{
+            display: inline-block;
+            background-color: $text_h_span;
+            border: 1px solid rgba(255,255,255,1);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        svg{
+            transform: rotate(-90deg);
+            width: 45px;
+            height: 45px;
+            fill:rgba(255,255,255,.6);
+        }
+        &.hide{
+            opacity: 0;
+        }
+    }
